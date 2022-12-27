@@ -1,0 +1,19 @@
+.backgroundvictim{
+    width: 100%;
+    background-image: url('/static/img/victim_hands.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 7em;
+    height: 100%;
+    z-index: -1;
+    display: grid;
+}
+
+.formbox{
+    position:absolute;
+    left: 10%;
+}
+input{
+    color: black;
+}

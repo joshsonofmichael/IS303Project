@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{%load static%} 
+{%block title%} 
+<title>Table</title>
+{%endblock%}
+{%block body%}
+    <br/>
+<div class="backgroundgirl">
+    <h2 class="tabletitle">Table: Missing Children From Utah</h2>
+      <table class="table table-bordered table-hover table-condensed">
+        <thead>
+          <tr>
+            <th class="tableheader" title="Field #1">date missing</th>
+            <th class="tableheader" title="Field #2">last name</th>
+            <th class="tableheader" title="Field #3">first name</th>
+            <th class="tableheader" title="Field #4">age at missing</th>
+            <th class="tableheader" title="Field #5">city</th>
+            <th class="tableheader" title="Field #6">state</th>
+            <th class="tableheader" title="Field #7">gender</th>
+            <th class="tableheader" title="Field #8">race</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for person in missingpersons %}
+          <tr>
+            <td class="tableitem" id="date_missing">
+              {{person.date_missing}}
+            </td>
+            <td class="tableitem" class="tableitem" id="lastName">
+              {{person.lastName}}
+            </td>
+            <td class="tableitem" id="firstName">{{person.firstName}}</td>
+            <td class="tableitem" align="right" id="age_at_missing">
+              {{person.age_at_missing}}
+            </td>
+            <td class="tableitem" id="city">{{person.city}}</td>
+            <td class="tableitem" id="state">{{person.state}}</td>
+            <td class="tableitem" id="gender">{{person.gender}}</td>
+            <td class="tableitem" id="race">{{person.race}}</td>
+          </tr>
+</div>
+          {% endfor %}
+{%endblock%}

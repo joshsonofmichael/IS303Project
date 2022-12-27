@@ -1,0 +1,94 @@
+{%extends 'base.html'%}
+{%load static%} 
+{%block title%} 
+<title>Add</title>
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/static/add.css">
+{%endblock%}
+{%block body%}
+
+    <head>
+        <style>
+          body {background-color:rgb(97, 97, 97);
+            }
+          form {
+            text-align:right;
+            padding-right:100px;
+      }
+          .hello {
+            padding-right: 100px; 
+            color: black;
+            text-align:right;
+          }
+          .column {
+            float: left;
+            width: 50%;
+          }
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          .report {
+            font-family:time;
+            font-size: 45px;
+            font-weight: 10;
+            text-decoration: overline;
+            text-shadow: 4px 4px 5px #e7f655;
+            text-align:right;
+            padding-right: 100px; 
+          }
+          </style>
+      </head>
+    {%comment%}<div class="backgroundvictim">{%endcomment%}
+      <div style="text-align:center;">
+        <br>
+         <h2 style="color:white;">Know someone that has gone missing?</h2>
+      </div>
+      <br>
+      <div class="row">
+        <div class="column">
+      <body>
+            <form method="post">
+              {% csrf_token %}
+              <label for="date_missing">Date Missing:</label>
+              <input type="type" name="date_missing" id="date_missing" style="color:black;">
+              <br>
+              <label for="firstName">First Name:</label>
+              <input type="type" name="firstName" id="firstName" style="color:black;">
+              <br>
+              <label for="lastName">Last Name:</label>
+              <input type="type" name="lastName" id="lastName" style="color:black;">
+              <br>
+              <label for="age_at_missing">Age at Missing:</label>
+              <input type="type" name="age_at_missing" id="age_at_missing" style="color:black;">
+              <br>
+              <label for="city">City:</label>
+              <input type="type" name="city" id="city" style="color:black;">
+              <br>
+              <label for="state">State(abbreviated): </label>
+              <input type="type" name="state" id="state" style="color:black;">
+              <br>
+              <label for="gender">Gender(F/M): </label>
+              <input type="type" name="gender" id="gender" style="color:black;">
+              <br>
+              <label for="race">Race(one letter): </label>
+              <input type="type" name="race" id="race" style="color:black;">
+              <br></br> 
+              <button type="submit" style="background-color: rgb(251, 251, 116); color: black; border: none;" class="btn btn-primary">Add Missing Person</button>
+            </form>
+          </div>
+          <div class="column">
+            <p class= "hello">The Utah Department Public Safety's website says, "THERE IS NO WAITING PERIOD TO REPORT A MISSING PERSON. It is mandatory that law enforcement 
+              take missing persons reports immediately and enter the information into the FBI's National 
+              Crime Information Center (NCIC) within 2 hours for missing persons under the age of 21. 
+              (Protect Act, Suzanne's Law, Adam Walsh Child  Protection Safety Act and the Crime Control 
+              Act of 1990)" As soon as you know a child is missing, report it to local police. After, input their information
+              into this website.</p>
+            <p class="report">REPORT IMMEDIATELY</p>
+            </div>
+          </div>
+        </div>
+    {%comment%}</div>{%endcomment%}
+      </body>
+{%endblock%}

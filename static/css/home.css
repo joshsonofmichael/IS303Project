@@ -1,0 +1,18 @@
+.backgroundgirl{
+    width: 100%;
+    justify-content: center;
+    background-image: url('/static/img/victim_girl.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 7em;
+    height: 100%;
+    z-index: -1;
+}
+
+.textbox{
+    width: 300em;
+    padding-left: 5em;
+    position: absolute;
+    left: 5em;
+}
